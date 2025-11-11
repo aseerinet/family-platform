@@ -96,4 +96,12 @@ function audienceFromForm(form){
   if(vis==="custom") aud.allowed_user_ids = form.allowed_user_ids.value.split(",").map(s=>s.trim()).filter(Boolean);
   return aud;
 }
-function escapeHtml(s){ return s.replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",""":"&quot;","'":"&#39;"}[c])); }
+function escapeHtml(s){
+  return s.replace(/[&<>"']/g, c => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    "\"": "&quot;",
+    "'": "&#39;"
+  }[c]));
+}
