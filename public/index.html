@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>منصة الأسرة</title>
+  <link rel="stylesheet" href="./styles.css" />
+  <script defer src="./auth.js"></script>
+  <script defer src="./app.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <img src="./assets/logo.svg" class="logo" alt="" />
+      <span>منصة الأسرة</span>
+    </div>
+    <div class="actions">
+      <button id="btnLogin">دخول</button>
+      <button id="btnLogout" hidden>خروج</button>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <nav>
+        <a href="#/home" data-route>الرئيسية</a>
+        <a href="#/feed" data-route>المحتوى العام</a>
+        <a href="#/exercises" data-route>تماريني</a>
+        <a href="#/space" data-route>مساحتي</a>
+        <a href="#/messages" data-route>الرسائل</a>
+        <a href="#/library" data-route>المكتبة</a>
+        <a href="#/admin" data-route class="admin-only" hidden>الإدارة</a>
+      </nav>
+      <div class="note">
+        <strong>معلومة:</strong> هذا الإصدار يعتمد تسجيل الدخول بـ <em>معرّف + PIN</em> فقط.
+      </div>
+    </aside>
+    <main id="view"></main>
+  </div>
+</body>
+</html>

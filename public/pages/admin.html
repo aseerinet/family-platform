@@ -1,0 +1,35 @@
+<header class="page-head head-home">لوحة الإدارة</header>
+<section class="grid cols-2">
+  <article class="card">
+    <h3>إضافة/تعديل مستخدم (ID + PIN)</h3>
+    <form id="userForm" class="grid">
+      <label>المعرّف (ID)</label>
+      <input class="input" name="id" required placeholder="مثال: osama" />
+      <label>الاسم (اختياري)</label>
+      <input class="input" name="name" placeholder="مثال: أسامة" />
+      <label>PIN</label>
+      <input class="input" name="pin" required placeholder="****" />
+      <button type="submit">حفظ</button>
+    </form>
+  </article>
+  <article class="card">
+    <h3>إنشاء منشور</h3>
+    <form id="newPostForm" class="grid">
+      <label>العنوان</label>
+      <input class="input" name="title" required />
+      <label>النص</label>
+      <textarea class="input" name="body" rows="4"></textarea>
+      <label>نوع الظهور</label>
+      <select class="input" name="visibility">
+        <option value="public">عام</option>
+        <option value="private_pair">خاص (مع فرد)</option>
+        <option value="custom">موجّه (أفراد محددون)</option>
+      </select>
+      <label>UID للفرد (للخاص)</label>
+      <input class="input" name="with_user_id" />
+      <label>UIDs مفصولة بفواصل (للموجّه)</label>
+      <input class="input" name="allowed_user_ids" placeholder="UID1,UID2" />
+      <button type="submit">نشر</button>
+    </form>
+  </article>
+</section>
